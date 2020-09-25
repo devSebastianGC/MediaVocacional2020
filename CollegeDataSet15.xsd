@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CollegeDataSet15" targetNamespace="http://tempuri.org/CollegeDataSet15.xsd" xmlns:mstns="http://tempuri.org/CollegeDataSet15.xsd" xmlns="http://tempuri.org/CollegeDataSet15.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CollegeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CollegeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.colegio2020media.Properties.Settings.GlobalReference.Default.CollegeConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TeacherRegisterTableAdapter" GeneratorDataComponentClassName="TeacherRegisterTableAdapter" Name="TeacherRegister" UserDataComponentName="TeacherRegisterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CollegeConnectionString (Settings)" DbObjectName="College.dbo.TeacherRegister" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TeacherName FROM dbo.TeacherRegister</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TeacherName" DataSetColumn="TeacherName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="CollegeConnectionString (Settings)" DbObjectName="College.dbo.TeacherRegister" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TeacherName FROM dbo.TeacherRegister</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CollegeDataSet15" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CollegeDataSet15" msprop:Generator_UserDSName="CollegeDataSet15">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TeacherRegister" msprop:Generator_TableClassName="TeacherRegisterDataTable" msprop:Generator_TableVarName="tableTeacherRegister" msprop:Generator_RowChangedName="TeacherRegisterRowChanged" msprop:Generator_TablePropName="TeacherRegister" msprop:Generator_RowDeletingName="TeacherRegisterRowDeleting" msprop:Generator_RowChangingName="TeacherRegisterRowChanging" msprop:Generator_RowEvHandlerName="TeacherRegisterRowChangeEventHandler" msprop:Generator_RowDeletedName="TeacherRegisterRowDeleted" msprop:Generator_RowClassName="TeacherRegisterRow" msprop:Generator_UserTableName="TeacherRegister" msprop:Generator_RowEvArgName="TeacherRegisterRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TeacherName" msprop:Generator_ColumnVarNameInTable="columnTeacherName" msprop:Generator_ColumnPropNameInRow="TeacherName" msprop:Generator_ColumnPropNameInTable="TeacherNameColumn" msprop:Generator_UserColumnName="TeacherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

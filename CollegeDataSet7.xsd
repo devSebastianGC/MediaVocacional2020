@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CollegeDataSet7" targetNamespace="http://tempuri.org/CollegeDataSet7.xsd" xmlns:mstns="http://tempuri.org/CollegeDataSet7.xsd" xmlns="http://tempuri.org/CollegeDataSet7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CollegeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CollegeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.colegio2020media.Properties.Settings.GlobalReference.Default.CollegeConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ScheduleTableAdapter" GeneratorDataComponentClassName="ScheduleTableAdapter" Name="Schedule" UserDataComponentName="ScheduleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CollegeConnectionString (Settings)" DbObjectName="College.dbo.Schedule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Shift FROM dbo.Schedule</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Shift" DataSetColumn="Shift" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="CollegeConnectionString (Settings)" DbObjectName="College.dbo.Schedule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Shift FROM dbo.Schedule</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CollegeDataSet7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CollegeDataSet7" msprop:Generator_UserDSName="CollegeDataSet7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Schedule" msprop:Generator_TableClassName="ScheduleDataTable" msprop:Generator_TableVarName="tableSchedule" msprop:Generator_RowChangedName="ScheduleRowChanged" msprop:Generator_TablePropName="Schedule" msprop:Generator_RowDeletingName="ScheduleRowDeleting" msprop:Generator_RowChangingName="ScheduleRowChanging" msprop:Generator_RowEvHandlerName="ScheduleRowChangeEventHandler" msprop:Generator_RowDeletedName="ScheduleRowDeleted" msprop:Generator_RowClassName="ScheduleRow" msprop:Generator_UserTableName="Schedule" msprop:Generator_RowEvArgName="ScheduleRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Shift" msprop:Generator_ColumnVarNameInTable="columnShift" msprop:Generator_ColumnPropNameInRow="Shift" msprop:Generator_ColumnPropNameInTable="ShiftColumn" msprop:Generator_UserColumnName="Shift" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
